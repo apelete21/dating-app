@@ -2,7 +2,7 @@ import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar } from "expo-status-bar";
-import { bgs, colors, uis } from "../constants";
+import { bgs, colors, poppins, uis } from "../constants";
 
 export function Welcome() {
     const navigation = useNavigation()
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     biggerText: {
         color: colors.white,
         fontSize: 40,
-        fontWeight: "bold",
+        fontFamily: poppins.p700,
         maxWidth: "70%",
         marginBottom: 10
     },
