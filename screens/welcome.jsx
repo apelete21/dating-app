@@ -21,8 +21,8 @@ export function Welcome() {
                     <View style={styles.container}>
                         <View style={styles.texts}>
                             <Text style={styles.biggerText}>
-                                <Text style={styles.textRed}>Dating</Text>
-                                , better than ever before
+                                <Text style={styles.textRed}>Dating, </Text>
+                                <Text>better than ever before</Text>
                             </Text>
                             <Text style={styles.lowerText}>
                                 We know, finding love can be very hard. We think it shouldn't be.
@@ -59,14 +59,15 @@ const styles = StyleSheet.create({
         paddingHorizontal: uis.xPadding
     },
     texts: {
-        marginBottom: 50
+        marginBottom: 40
     },
     biggerText: {
         color: colors.white,
-        fontSize: 40,
+        fontSize: 35,
         fontFamily: poppins.p700,
         maxWidth: "70%",
-        marginBottom: 10
+        marginBottom: 10,
+        lineHeight: 40
     },
     textRed: {
         color: colors.primary,
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     lowerText: {
         color: colors.white,
         opacity: .5,
-        fontWeight: "100",
+        fontFamily: poppins.p200,
         maxWidth: "80%"
     },
     buttons: {
@@ -86,14 +87,14 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color: colors.white,
-        fontWeight: "700",
+        fontFamily: poppins.p600,
         fontSize: uis.btnFont,
-        textAlign: "center"
+        textAlign: "center",
     },
     btnGradient: {
         borderRadius: uis.btnRadius,
         overflow: "hidden",
-        paddingVertical: 10,
+        paddingVertical: 8,
         position: "relative",
     }
 })
