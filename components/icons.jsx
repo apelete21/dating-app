@@ -3,21 +3,21 @@ import React from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
 
-export function Icons(props) {
-  return (
-    <View>
-          <MaterialCommunityIcons name={props.name} size={props.size} />
-    </View>
-  )
+export function Icons({ name, size, style }) {
+    return (
+        <View>
+            <MaterialCommunityIcons name={name} size={size} style={style} />
+        </View>
+    )
 }
 
-export function HeaderBackBtn() {
+export function HeaderBackBtn(props) {
     const navigation = useNavigation()
     return (
         <View>
-            <MaterialCommunityIcons name={"chevron-double-left"} size={30} style={{
-                color: "gray",
-            }} onPress={()=> navigation.goBack()} />
+            <MaterialCommunityIcons name={"chevron-left"} size={30} style={{
+                color: props.dark ? "black" : "white",
+            }} onPress={() => navigation.goBack()} />
         </View>
     )
 }

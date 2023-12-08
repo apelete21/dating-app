@@ -2,7 +2,10 @@ export const colors = {
     primary: "#cb356b",
     secondary: "#bd3f32",
     tertiary: "#cb356b90",
-    white: "#fff"
+    white: "#fff",
+    black: "#000",
+    whiteTransparent: "#fff2",
+    transparent: "#0000"
 }
 export const bgs = {
     BtnBgPrimary: ['#cb356b', '#bd3f32'],
@@ -11,7 +14,7 @@ export const bgs = {
 
 export const uis = {
     btnRadius: 30,
-    xPadding: 25,
+    xPadding: 20,
     btnFont: 16,
 }
 

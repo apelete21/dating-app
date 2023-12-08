@@ -17,6 +17,8 @@ import { Options } from '../components/header'
 import LoadingScreen from '../components/loading'
 import { Poppins_100Thin, Poppins_200ExtraLight, Poppins_300Light, Poppins_400Regular, Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold, Poppins_800ExtraBold, Poppins_900Black } from "@expo-google-fonts/poppins"
 import { useFonts } from 'expo-font'
+import HeaderBar from '../components/headerbar'
+import { Code } from '../screens/code'
 
 const Stack = createNativeStackNavigator()
 
@@ -39,9 +41,16 @@ export default function Router() {
     } else {
         return (
             <NavigationContainer>
-                <Stack.Navigator initialRouteName='Welcome'>
+                <Stack.Navigator initialRouteName='Welcome' screenOptions={{
+                    header: ()=>{
+                        return (
+                            <HeaderBar dark />
+                        )
+                    }
+                }}>
                     <Stack.Screen name="Welcome" component={Welcome} options={Options} />
                     <Stack.Screen name="Home" component={Home} />
+                    <Stack.Screen name="Code" component={Code} />
                     <Stack.Screen name="Chat" component={Chat} />
                     <Stack.Screen name="Menu" component={Menu} />
                     <Stack.Screen name="Like" component={Like} />

@@ -2,47 +2,39 @@ import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from
 import { useNavigation } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar } from "expo-status-bar";
-import { bgs, colors, poppins, uis } from "../constants";
+import { colors, poppins, uis } from "../constants";
+import { ButtonPrimary, ButtonSecondary } from "../components/buttons";
+import { ScreenBg } from "../components/screenbg";
 
 export function Welcome() {
     const navigation = useNavigation()
-    const toLoginPage = ()=> {
+    const toLoginPage = () => {
         navigation.navigate("Login")
     }
-    const toRegisterPage = ()=> {
+    const toRegisterPage = () => {
         navigation.navigate("Register")
     }
 
     return (
         <>
             <StatusBar style="dark" />
-            <ImageBackground source={require("../assets/background.jpg")} resizeMode="cover" style={styles.background}>
-                <LinearGradient colors={['transparent', 'rgba(0,0,0,0.7)', 'rgba(0,0,0,0.9)']} style={styles.background}>
-                    <View style={styles.container}>
-                        <View style={styles.texts}>
-                            <Text style={styles.biggerText}>
-                                <Text style={styles.textRed}>Dating, </Text>
-                                <Text>better than ever before</Text>
-                            </Text>
-                            <Text style={styles.lowerText}>
-                                We know, finding love can be very hard. We think it shouldn't be.
-                            </Text>
-                        </View>
-                        <View style={styles.buttons}>
-                            <TouchableOpacity style={styles.button} onPress={toRegisterPage}>
-                                <LinearGradient style={styles.btnGradient} colors={bgs.BtnBgWhite} start={[1, 0]} end={[0, 1]}>
-                                    <Text style={{ ...styles.buttonText, color: "#000" }}>Let's get started</Text>
-                                </LinearGradient>
-                            </TouchableOpacity>
-                            <TouchableOpacity style={styles.button} onPress={toLoginPage}>
-                                <LinearGradient style={styles.btnGradient} colors={bgs.BtnBgPrimary} start={[1, 0]} end={[0, 1]}>
-                                    <Text style={styles.buttonText}>Login</Text>
-                                </LinearGradient>
-                            </TouchableOpacity>
-                        </View>
+            <ScreenBg source={require("../assets/background.jpg")} >
+                <View style={styles.container}>
+                    <View style={styles.texts}>
+                        <Text style={styles.biggerText}>
+                            <Text style={styles.textRed}>Dating, </Text>
+                            <Text>better than ever before</Text>
+                        </Text>
+                        <Text style={styles.lowerText}>
+                            We know, finding love can be very hard. We think it shouldn't be.
+                        </Text>
                     </View>
-                </LinearGradient>
-            </ImageBackground>
+                    <View style={styles.buttons}>
+                        <ButtonSecondary value="Let's get started" onPress={toRegisterPage} />
+                        <ButtonPrimary value="Login" onPress={toLoginPage} />
+                    </View>
+                </View>
+            </ScreenBg>
         </>
     );
 }

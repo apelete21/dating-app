@@ -12,6 +12,9 @@ export const Options = (props) => {
         },
         headerTitle: "",
         headerShadowVisible: false,
+        headerStyle: {
+            backgroundColor: "#000"
+        }
     } : {
         headerLeft: () => {
             return (
