@@ -21,7 +21,7 @@ export function Welcome() {
             <ScreenBg source={require("../assets/background.jpg")} >
                 <View style={styles.container}>
                     <View style={styles.texts}>
-                        <Text style={styles.biggerText}>
+                        <Text style={styles.titleText}>
                             <Text style={styles.textRed}>Dating, </Text>
                             <Text>better than ever before</Text>
                         </Text>
@@ -40,10 +40,6 @@ export function Welcome() {
 }
 
 const styles = StyleSheet.create({
-    background: {
-        flex: 1,
-        width: "100%",
-    },
     container: {
         flex: 1,
         alignContent: "flex-end",
@@ -53,7 +49,7 @@ const styles = StyleSheet.create({
     texts: {
         marginBottom: 40
     },
-    biggerText: {
+    titleText: {
         color: colors.white,
         fontSize: 35,
         fontFamily: poppins.p700,

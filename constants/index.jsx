@@ -1,9 +1,12 @@
 export const colors = {
     primary: "#cb356b",
+    primaryTransparent: "#cb356bc0",
     secondary: "#bd3f32",
+    secondaryTransparent: "#bd3f32c0",
     tertiary: "#cb356b90",
     white: "#fff",
     black: "#000",
+    blackTransparent: "#0005",
     whiteTransparent: "#fff2",
     transparent: "#0000"
 }

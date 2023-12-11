@@ -16,7 +16,7 @@ export default function HeaderBar(props) {
 const styles = StyleSheet.create({
     container: {
         position: "absolute",
-        top: 25,
+        top: 50,
         paddingVertical: 10,
         paddingHorizontal: uis.xPadding,
         justifyContent: 'space-between',
