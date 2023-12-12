@@ -1,3 +1,5 @@
+import { Dimensions } from "react-native"
+
 export const colors = {
     primary: "#cb356b",
     primaryTransparent: "#cb356bc0",
@@ -31,4 +33,9 @@ export const poppins = {
     p700: "Poppins_700Bold",
     p800: "Poppins_800ExtraBold",
     p900: "Poppins_900Black"
+}
+
+export const dimensions = {
+    vw: Dimensions.get('window').width,
+    vh: Dimensions.get('window').height,
 }
